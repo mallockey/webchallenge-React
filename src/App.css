@@ -12,6 +12,16 @@ img {
   border-radius: 20px;
 }
 
+input {
+  height: 3rem;
+  font-size: medium;
+  color: green;
+  width: 15rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .errorContainer {
   color: red;
   font-size: 2rem;
@@ -30,9 +40,26 @@ img {
   width: 12rem;
 }
 
+#subHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 14rem;
+}
+
 #petsContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.noSearchResultsContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: red;
 }
 
 .petSubItem {
@@ -156,7 +183,7 @@ img {
     width: 15rem;
     border-radius: 'none';
   }
-  .petSubItem { 
+  .petSubItem {
     width: full;
   }
 }

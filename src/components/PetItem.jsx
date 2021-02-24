@@ -31,13 +31,17 @@ const PetItem = (props) => {
     }
   }
   return (
-    <div className="petSubItem" ref={petSubItemRef}>
+    <div
+      className="petSubItem"
+      ref={petSubItemRef}
+      searchterm={props.pet.title}
+      onClick={handleClick}
+    >
       <div
         ref={petImageDivRef}
         className="petImageDiv"
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
-        onClick={handleClick}
         style={{ backgroundImage: `url(${props.pet.url})` }}
       >
         <span ref={petImageTextRef} className="petImageText">

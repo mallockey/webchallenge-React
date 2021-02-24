@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ErrorContainer from './ErrorContainer'
+import NoSearchResults from './NoSearchResults'
 import PetItem from './PetItem'
 
 const PetsContainer = (props) => {
@@ -13,7 +14,6 @@ const PetsContainer = (props) => {
         data = await fetch('https://eulerity-hackathon.appspot.com/pets')
       } catch (err) {
         console.error('There was an error fetching the API.')
-        console.error(err)
         showFetchError(true)
         return
       }
@@ -24,6 +24,7 @@ const PetsContainer = (props) => {
 
   return (
     <div id="petsContainer">
+      {props.noSearchResults ? <NoSearchResults /> : ''}
       {pets.length > 0 ? (
         pets.map((pet, index) => {
           return (

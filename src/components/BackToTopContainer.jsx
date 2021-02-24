@@ -1,8 +1,8 @@
 import React from 'react'
 
-const BackToTopButton = () => {
+const BackToTopContainer = () => {
   return (
-    <div className="backToTopContainer">
+    <div id="backToTopContainerID" className="backToTopContainer">
       <button
         type="button"
         className="backToTopButton"
@@ -14,4 +14,4 @@ const BackToTopButton = () => {
   )
 }
 
-export default BackToTopButton
+export default BackToTopContainer
