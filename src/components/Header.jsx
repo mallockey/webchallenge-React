@@ -59,6 +59,7 @@ const Header = (props) => {
     <div className="header">
       <img src="logo.png" id="headerLogo" alt="not found" />
       <div id="subHeader">
+        <input type="text" onInput={handleSearch} placeholder="Search by pet name" />
         <button
           id="downloadButton"
           className={
@@ -71,7 +72,6 @@ const Header = (props) => {
             ? `Download ${props.imageDownloadArr.length} images`
             : 'Select images to download'}
         </button>
-        <input type="text" onInput={handleSearch} placeholder="Search by pet name" />
       </div>
     </div>
   )
